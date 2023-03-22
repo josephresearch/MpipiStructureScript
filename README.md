@@ -98,6 +98,7 @@ The second argument is the amino acid list you are inputting. This should be pro
 Valid inputs would therefore look like:
 
 seq2config.py 1 ARF
+
 seq2config.py 3 ALAARGPHE
 
 The program will automatically identify the length of these sequences and delimit the sequence to properly obtain
