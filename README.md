@@ -20,6 +20,7 @@ an Mpipi sequence with the proper types and charges.
 ----------PROGRAM INPUTS----------
 
 METHOD 1: a file seq.txt that contains the amino acid sequence to convert to Mpipi
+
 METHOD 2: command line arguments specifying the amino acid code representation (one or three letter codes) and
           the amino acid sequence to convert to Mpipi
 
@@ -46,11 +47,17 @@ file must be in the same directory/folder as seq2config.py. The sequence text fi
 that file, the amino acids must be listed as 
 
 {Amino acid 1}
+
 {Amino acid 2}
+
 ...
+
 ...
+
 ...
+
 {Amino acid N - 1}
+
 {Amino acid N}
 
 There should be no additional spaces and no header/footer to the file. The amino acid may be provided as either
