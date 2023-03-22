@@ -18,11 +18,13 @@ These files provide the program with a 'key' that will enable it to translate an
 an Mpipi sequence with the proper types and charges.
 
 ----------PROGRAM INPUTS----------
+
 METHOD 1: a file seq.txt that contains the amino acid sequence to convert to Mpipi
 METHOD 2: command line arguments specifying the amino acid code representation (one or three letter codes) and
           the amino acid sequence to convert to Mpipi
 
 ----------PROGRAM OUTPUTS----------
+
 A LAMMPs structure file properly listing the amino acids in the sequence provided with bonds, charges,
 and positions. Please note that the box size may need to be adjusted to achieve the desired density.
 The program will adapt the box size to fit whatever amino acid sequence is provided, but manipulations to
