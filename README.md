@@ -10,9 +10,13 @@ simulate that sequence in Mpipi. Before you begin, you MUST ensure that the foll
 directory/folder as seq2config.py:
 
 aa_charges_one_letter.txt
+
 aa_charges_three_letters.txt
+
 aa_types_one_letter.txt
+
 aa_types_three_letters.txt
+
 
 These files provide the program with a 'key' that will enable it to translate an amino acid sequence into 
 an Mpipi sequence with the proper types and charges.
