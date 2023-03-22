@@ -1,7 +1,7 @@
 # MpipiStructureScript
 All the files required to take an amino acid sequence and generate a LAMMPs structure input file.
 
-The ReadMe.txt file is provided below (and in the files of this repository)
+The ReadMe.txt file is provided below (and in the files of this repository where the formatting is slightly nicer)
 
 README:
 
