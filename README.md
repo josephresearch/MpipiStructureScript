@@ -22,6 +22,7 @@ These files provide the program with a 'key' that will enable it to translate an
 an Mpipi sequence with the proper types and charges.
 
 ----------REQUIRED PACKAGES----------
+
 python2, numpy
 
 ----------PROGRAM INPUTS----------
@@ -48,6 +49,7 @@ The output file will be named myconfig.dat
 There are two ways of operating this program. 
 
 ----------METHOD 1----------
+
 Run from the command line using: python3 seq2config.py
 
 You must provide a sequence text file. This sequence text
