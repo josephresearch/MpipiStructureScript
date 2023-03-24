@@ -23,7 +23,7 @@ an Mpipi sequence with the proper types and charges.
 
 ----------REQUIRED PACKAGES----------
 
-python2, numpy
+python3, numpy
 
 ----------PROGRAM INPUTS----------
 
