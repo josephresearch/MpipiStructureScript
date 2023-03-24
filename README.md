@@ -21,6 +21,9 @@ aa_types_three_letters.txt
 These files provide the program with a 'key' that will enable it to translate an amino acid sequence into 
 an Mpipi sequence with the proper types and charges.
 
+----------REQUIRED PACKAGES----------
+python2, numpy
+
 ----------PROGRAM INPUTS----------
 
 METHOD 1: a file seq.txt that contains the amino acid sequence to convert to Mpipi
@@ -45,8 +48,9 @@ The output file will be named myconfig.dat
 There are two ways of operating this program. 
 
 ----------METHOD 1----------
+Run from the command line using: python3 seq2config.py
 
-The first is to provide a sequence text file. This sequence text
+You must provide a sequence text file. This sequence text
 file must be in the same directory/folder as seq2config.py. The sequence text file must be named seq.txt . Within
 that file, the amino acids must be listed as 
 
