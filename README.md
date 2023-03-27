@@ -19,7 +19,13 @@ aa_types_three_letters.txt
 
 
 These files provide the program with a 'key' that will enable it to translate an amino acid sequence into 
-an Mpipi sequence with the proper types and charges.
+an Mpipi sequence with the proper types and charges. dditionally, seq2config.py requires the following 
+packages:
+
+
+python3
+
+numpy
 
 ----------REQUIRED PACKAGES----------
 
