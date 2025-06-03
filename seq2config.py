@@ -34,13 +34,24 @@ if len(argv) > 1:
 		typescharges = []
 
 		for i in range(nres):
-			k, = np.where(charges[:,0] == seq [i])
-			p, = np.where(types[:,0] == seq [i])
+			k, = np.where(charges[:,0] == seq[i])
+			p, = np.where(types[:,0] == seq[i])
 			typescharges.append([int(types[p,1]),float(charges[k,1])])
 
 else:
+    user_input = input("Enter sequence format (1 = one-letter, 2 = three-letter): ").strip()
+
     seq = np.loadtxt('seq.txt', dtype=str)
-    seqType = len(seq[0])
+    
+    # Optionally preprocess for one-letter format
+    if user_input == "1":
+        if seq.ndim > 1:
+            seq = ''.join(seq.flatten())
+        else:
+            seq = ''.join(seq)
+        seqType = 1
+    else:
+        seqType = len(seq[0])
 
     if seqType == 3:
         charges = np.loadtxt('aa_charges_three_letters.txt', dtype=str)
@@ -62,9 +73,12 @@ else:
         typescharges = []
 
         for i in range(nres):
-            k, = np.where(charges[:,0] == seq [i] )
-            p, = np.where(types[:,0] == seq [i] )
+            k, = np.where(charges[:,0] == seq[i])
+            p, = np.where(types[:,0] == seq[i])
             typescharges.append([int(types[p,1]),float(charges[k,1])])
+
+
+
 
 total_atoms = nres
 
