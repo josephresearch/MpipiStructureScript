@@ -68,7 +68,7 @@ else:
 
 total_atoms = nres
 
-no_atom_types = 40
+no_atom_types = 20
 
 out = open('myconfig.dat','w')
 out.write('LAMMPS data file for IDP\n\n')
@@ -77,8 +77,8 @@ out.write('%d bonds\n\n'%(total_atoms-1))
 out.write('%d atom types\n'%no_atom_types)
 out.write('1 bond types\n\n')
 
-min_box = nres * -3
-max_box = nres * 3
+min_box = (nres+1) * -2 - 1
+max_box = (nres+1) * 2 + 1
 
 out.write('%5f   %5f  xlo xhi\n'%(min_box,max_box))
 out.write('%5f   %5f  ylo yhi\n'%(min_box,max_box))
@@ -105,27 +105,7 @@ mass_dict = {1:   131.199997,
              17:   114.099998,    
              18:   97.1200027,    
              19:   103.099998,    
-             20:   113.199997,    
-             21:   131.199997,    
-             22:    57.0499992,    
-             23:    128.199997,    
-             24:    101.099998,    
-             25:   156.199997,    
-             26:    71.0800018,    
-             27:    115.099998,    
-             28:   129.100006,    
-             29:    163.199997,    
-             30:    99.0699997,    
-             31:    113.199997,    
-             32:    128.100006,    
-             33:    186.199997,    
-             34:   147.199997,    
-             35:    87.0800018,    
-             36:    137.100006,    
-             37:    114.099998,    
-             38:    97.1200027,    
-             39:   103.099998,   
-             40:   113.199997
+             20:   113.199997
 }
 
 count = 1
@@ -143,16 +123,16 @@ for k,v in enumerate(typescharges):
     type = v[0]
     charge = v[1]
 
-    if int(dis) < int(50):
+    if int(dis) < int(max_box/6):
         xcoord = xcoord + 6.0
         ycoord = 0
         zcoord = 0
-    elif int(dis) >= int(50) and int(dis) < int(100):
+    elif int(dis) >= int(max_box/6) and int(dis) < int(max_box/3):
         xcoord = xcoord
         ycoord = ycoord + 6.0
         zcoord = 0
 
-    elif int(dis) >= int(100):
+    elif int(dis) >= int(max_box/3):
         xcoord = xcoord
         ycoord = ycoord
         zcoord = zcoord + 6.0
